@@ -1,0 +1,28 @@
+<div class="author">
+    <h1 class="author_heading">Me, Grimm...</h1>
+    <p class="author_body">
+        Polymath, Polyglot, HTML enthusiast.
+    </p>
+</div>
+
+<img src="img/Hero.jpg" alt="UwU" class="hero-image" width="400" >
+
+<section class="articles">
+    <h2 class="article_heading">Latest Posts</h2>
+
+    <ul class="article_ul">
+           
+        <% data.forEach(post => { %>    
+            <li>
+                <a href="/post/<%= post._id %>">
+                    <span><%= post.title %></span>
+                    <span class="article-list_date"><%= post.createdAt.toDateString() %></span>
+                </a>
+            </li>
+        <% }) %>
+
+    </ul>
+
+    <a href="#" class="pagination">&lt; View Older Posts</a>
+
+</section>
